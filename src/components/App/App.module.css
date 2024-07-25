@@ -1,0 +1,28 @@
+.app {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background-color: #2e2e2e;
+	padding: 20px;
+}
+
+.todoListContainer {
+	background-color: #3e3e3e;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+	width: 100%;
+	max-width: 600px;
+	box-sizing: border-box;
+}
+
+.header {
+	font-size: 24px;
+	margin-bottom: 20px;
+	text-align: center;
+	color: #fff;
+}
+
+
+
