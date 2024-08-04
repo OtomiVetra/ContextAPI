@@ -1,14 +1,17 @@
+import { useContext } from 'react';
 import styles from './TodoItem.module.css';
+import { TodoContext } from '../../TodoContext';
 
-export const TodoItem = ({
-	todo,
-	isEditing,
-	currentTodo,
-	editTodo,
-	handleEditInputChange,
-	saveTodo,
-	deleteTodo,
-}) => {
+export const TodoItem = ({ todo }) => {
+	const {
+		isEditing,
+		currentTodo,
+		editTodo,
+		handleEditInputChange,
+		saveTodo,
+		deleteTodo,
+	} = useContext(TodoContext);
+
 	return (
 		<li className={styles.todoListItem}>
 			{isEditing && currentTodo.id === todo.id ? (

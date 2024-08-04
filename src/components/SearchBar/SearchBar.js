@@ -1,8 +1,12 @@
+import { useContext } from 'react';
 import styles from './SearchBar.module.css';
+import { TodoContext } from '../../TodoContext';
 
-export const SearchBar = ({ onSearch }) => {
+export const SearchBar = () => {
+	const { debouncedSearch } = useContext(TodoContext);
+
 	const handleSearchInputChange = (e) => {
-		onSearch(e.target.value);
+		debouncedSearch(e.target.value);
 	};
 
 	return (
